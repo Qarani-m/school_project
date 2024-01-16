@@ -1,0 +1,121 @@
+2024-01-13 20:55:09,388 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>:
+
+    Property: logging.level
+    Value: "com.libraryservice"
+    Origin: class path resource [application.yml] - 25:10
+    Reason: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+
+Action:
+
+Update your application's configuration
+
+2024-01-13 20:56:17,732 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.com' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.com
+    Value: "libraryservice = debug"
+    Origin: class path resource [application.yml] - 27:7
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.libraryservice = debug)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
+2024-01-13 20:56:39,259 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.com' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.com
+    Value: "libraryservice = DEBUG"
+    Origin: class path resource [application.yml] - 27:7
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.libraryservice = DEBUG)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
+2024-01-13 20:57:15,208 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>:
+
+    Property: logging.level
+    Value: "com.libraryservice = DEBUG"
+    Origin: class path resource [application.yml] - 25:10
+    Reason: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+
+Action:
+
+Update your application's configuration
+
+2024-01-13 20:57:28,130 [INFO] com.libraryservice.LibraryServiceApplication [main] Starting LibraryServiceApplication using Java 21.0.1 with PID 23301 (/home/martin/Desktop/Java/micro-service/library-service/target/classes started by martin in /home/martin/Desktop/Java/micro-service/library-service)
+2024-01-13 20:57:28,138 [INFO] com.libraryservice.LibraryServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-13 20:57:30,475 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-13 20:57:30,527 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 31 ms. Found 0 JPA repository interfaces.
+2024-01-13 20:57:32,017 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 9098 (http)
+2024-01-13 20:57:32,069 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-01-13 20:57:32,071 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-13 20:57:32,240 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-01-13 20:57:32,241 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3875 ms
+2024-01-13 20:57:32,707 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-13 20:57:32,840 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-13 20:57:32,972 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-01-13 20:57:33,651 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-13 20:57:33,769 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-01-13 20:57:35,192 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c56644f
+2024-01-13 20:57:35,198 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-01-13 20:57:35,329 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-13 20:57:37,600 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-13 20:57:37,688 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 20:57:37,808 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-13 20:57:39,450 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 9098 (http) with context path ''
+2024-01-13 20:57:39,509 [INFO] com.libraryservice.LibraryServiceApplication [main] Started LibraryServiceApplication in 13.111 seconds (process running for 14.515)
+2024-01-13 20:57:48,126 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-9098-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-13 20:57:48,128 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-9098-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-01-13 20:57:48,135 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-9098-exec-1] Completed initialization in 6 ms
+2024-01-13 20:57:48,636 [ERROR] com.libraryservice.service.LibraryServiceImpl [http-nio-9098-exec-1] Some shiet
+2024-01-13 20:58:38,710 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 20:58:38,719 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-01-13 20:58:38,760 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
