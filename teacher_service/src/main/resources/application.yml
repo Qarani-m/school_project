@@ -1,4 +1,5 @@
 
+
 server:
   port: 9098
 
@@ -21,4 +22,4 @@ logging:
     file: "%d [%level] %c{1.} [%t] %m%n"
   file:
     path: /logs/
-    name: student_service.log
+    name: teacher_service.log

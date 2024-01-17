@@ -46,7 +46,7 @@ public class StudentController {
     @PostMapping("/create")
     public ResponseEntity<String> addStudent(@RequestBody StudentDto studentDto) {
         // Add a new student
-       String message=  studentService.addStudent(studentDto);
+        String message = studentService.addStudent(studentDto);
         return new ResponseEntity<>(message, HttpStatus.CREATED);
     }
 
@@ -63,8 +63,8 @@ public class StudentController {
         // Update an existing student
         String isUpdated = studentService.updateStudent(studentId, updatedStudent);
         return isUpdated.contains("No Student found") ?
-                new ResponseEntity<>(HttpStatus.NOT_FOUND):
-                new ResponseEntity<>(HttpStatus.OK) ;
+                new ResponseEntity<>(HttpStatus.NOT_FOUND) :
+                new ResponseEntity<>(HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{studentId}")
@@ -75,6 +75,7 @@ public class StudentController {
                 new ResponseEntity<>(HttpStatus.OK) :
                 new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
     @GetMapping("/level/{level}")
     public ResponseEntity<List<StudentEntity>> getStudentsByLevel(@PathVariable String level) {
         // Get all students in a specific level
